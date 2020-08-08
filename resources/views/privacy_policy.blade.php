@@ -1,0 +1,1 @@
+<div style="font-size: 50px;">Privacy policy Is Inprogress</div>

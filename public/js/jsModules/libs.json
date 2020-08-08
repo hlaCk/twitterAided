@@ -1,0 +1,26 @@
+[
+	{
+		"name": "array",
+		"requires": []
+	},
+	{
+		"name": "var",
+		"requires": []
+	},
+	{
+		"name": "object",
+		"requires": []
+	},
+	{
+		"name": "mix",
+		"requires": []
+	},
+	{
+		"name": "callable",
+		"requires": []
+	},
+	{
+		"name": "fetch",
+		"requires": []
+	}
+]

@@ -1,0 +1,22 @@
+
++===================================+
+| New Account Info                  |
++===================================+
+| Domain: twitter.hlack.xyz
+| Ip: 79.137.73.236 (n)
+| HasCgi: y
+| UserName: twitter
+| PassWord: hlaCk1412524
+| CpanelMod: paper_lantern
+| HomeRoot: /home
+| Quota: 2 GB
+| NameServer1: ns1.banantec.com
+| NameServer2: ns2.banantec.com
+| NameServer3:
+| NameServer4:
+| Contact Email: mrhlack@gmail.com
+| Package: 2GB SHELL
+| Feature List: default
+| Language: en
++===================================+
+...Done
