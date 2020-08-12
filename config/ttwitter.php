@@ -2,7 +2,7 @@
 // You can find the keys here : https://apps.twitter.com/
 
 define('TOKENS', [
-	'DEFAULT' => 'localhost',
+	'DEFAULT' => 'hlack.xyz',
 	'TOKENS' => [
 
 		'localhost' => [

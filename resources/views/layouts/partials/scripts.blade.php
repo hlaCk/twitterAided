@@ -6,9 +6,9 @@
 		// 	'mix'
 		// ] && {}
 	</script>
-	
+
 	<script type="module">
-		
+
 		function _______a() {
 			import('/js/jsModules/lib.js')
 				.then(x=>x.default)
@@ -41,7 +41,7 @@
 						if(x) {
 							return lib(path + x);
 						}
-						
+
 						return lib;
 					};
 				})('./js/jsModules/');
@@ -49,13 +49,14 @@
 	</script>
 --}}
 
-	<script src="{{ asset('js/underz/_z.js') }}"></script>
+{{--	<script src="{{ asset('js/underz/_z.js') }}"></script>--}}
+	<script src="{{ asset('js/_z.js') }}"></script>
 	<script src="{{ asset('js/helpers.js') }}"></script>
 
 	<!-- declare lib -->
 {{--	<script src="{{ asset('js/jsModules/declare.js') }}"></script>--}}
 {{--	<script src="{{ asset('js/jsModules/xfetch.js') }}"></script>--}}
-	
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -68,27 +69,27 @@
 	{{--<script type="text/javascript" src="http://livejs.com/live.js"></script>--}}
 
 {{--    <script src="{{ asset('js/jsPlugins/xfetch.js') }}"></script>--}}
-	
+
 	{{--
 <style>
 	.swal-overlay {
 		background-color: rgba(43, 165, 137, 0.45);
 	}
-	
+
 	.swal-title {
 		margin: 0px;
 		font-size: 16px;
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
 		margin-bottom: 28px;
 	}
-	
+
 	.swal-footer {
 		background-color: rgb(245, 248, 250);
 		margin-top: 32px;
 		border-top: 1px solid #E9EEF1;
 		overflow: hidden;
 	}
-	
+
 </style>
 	--}}
     <!-- sweetalert -->
@@ -96,7 +97,7 @@
     <script src="{{asset('js/sweetalert.min.js')}}"></script>
     {{--<script src="{{asset('js/sweetalert.js')}}"></script>--}}
     <!-- sweetalert -->
-	
+
 	<!-- Scripts -->
     {{--<script src="{{ asset('js/app.js') }}" defer></script>--}}
 
@@ -106,39 +107,39 @@
     toggleAutoHides = function (e) {
     	e.preventDefault();
     	$('.toggle-auto-hide').toggleClass(['bold', 'text-danger', 'data-is-toggled']);
-    	
+
     	if($(this).is('.toggle-auto-hide')) {
 		    _z.cookie.set('toggle-auto-hide', !$(this).hasClass('data-is-toggled'));
 	    }
-	    
+
 	    return autoHidesEvent.call($('.has-auto-hide'));
     },
     autoHidesEvent = function () {
         return $('.allow-2-hide:not(.ignore-hide), .allow-2-show:not(.ignore-hide)', this).toggle();
     };
-    
+
 	$(document).ready(function () {
-		
+
 		$('.has-auto-hide')
 			.dblclick(toggleAutoHides)
 			.dblclick()
 			.find('.allow-2-show:not(.ignore-hide)')
 			.toggle();
-		
+
 		let toggleAutoHideBtn = $('.toggle-auto-hide');
 		toggleAutoHideBtn.click(toggleAutoHides);
-		
+
 		if(_z.cookie.get('toggle-auto-hide'))
 			toggleAutoHideBtn.click();
-		
+
 		let ajaxSetup = {
 			headers: {
 				// '_token': '{{ csrf_token() }}'
 				'X-CSRF-TOKEN': '{{ csrf_token() }}'
 				// $('meta[name="csrf-token"]').attr('content')
 			},
-			
-			
+
+
 			headers: {
 				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
 				Language: $('html').attr('lang')
@@ -155,9 +156,9 @@
 				this[callback] = true;
 				return callback;
 			}
-			
+
 		};
-		
+
 		$.ajaxSetup(ajaxSetup);
 		_z.ajaxSetup(ajaxSetup);
 	});
@@ -165,9 +166,9 @@
 	$.fn.formatText = function (data, attr) {
 		attr = attr || $.fn.formatText.attrName;
 		let format = $(this).attr(attr);
-		
+
 		if(format === undefined) return false;
-		
+
 		return format && format.replace(/[\[](\w+)[\]]/gi, (x, y) => {
 			return y in data && data[y] || y;
 		}) || "";
@@ -176,11 +177,11 @@
 		attr = attr || $.fn.formatText.attrName;
 		let format = $(this).attr(attr);
 		let field = $(this).attr('tfield') || false;
-		
+
 		// console.log(format, $(this), data);
 		if(format === undefined)
 			format = '['+ field+']';
-		
+
 		if(format === undefined) {
 			if(field) {
 				$(this).html(field in data ? data[field] : "");
@@ -189,11 +190,11 @@
 				return false;
 			}
 		}
-		
+
 		let $text = format && format.replace(/[\[](\w+)[\]]/gi, (x, y) => {
 			return y in data && data[y] || y;
 		}) || "";
-		
+
 		$(this).html($text);
 		return $(this);
 	};
@@ -265,7 +266,7 @@
 			// .then(_z.isFunction($callback) ? $callback : (x) => console.log(x))
 		;
 	};
-	
+
 	const aO = function aO($var, $v=undefined) {
 		if(this === window) return aO.call({}, $var, $v);
 		$V = ($val)=>{
