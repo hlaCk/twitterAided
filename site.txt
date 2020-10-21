@@ -6,7 +6,7 @@
 | Ip: 79.137.73.236 (n)
 | HasCgi: y
 | UserName: twitter
-| PassWord: hlaCk1412524.
+| PassWord: 
 | CpanelMod: paper_lantern
 | HomeRoot: /home
 | Quota: 2 GB
